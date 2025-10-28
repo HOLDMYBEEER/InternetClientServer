@@ -1,0 +1,23 @@
+{
+  "name": "vfh-ics-webstart",
+  "version": "1.0.0",
+  "description": "Einfaches Web-Projekt mit BrowserSync",
+  "repository": {
+    "type": "git",
+    "url": "git+https://thomas_onken@bitbucket.org/thomas_onken/vfh-ics-webstart.git"
+  },
+  "keywords": [
+    "ICS",
+    "WEBSTART"
+  ],
+  "author": "Thomas Onken",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/thomas_onken/vfh-ics-webstart",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1"
+  },
+  "scripts": {
+    "test": "gulp"
+  }
+}
