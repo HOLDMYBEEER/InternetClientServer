@@ -12,8 +12,8 @@ body {
   padding: 0;
 }
 
+/* Allen Aufgezählten Überschrift-Elemente eigenen Schriftstil & Farbe geben */
 h1, h2, h3 {
-  /* Eigene Schrift für Überschriften */
   font-family: 'Trebuchet MS', sans-serif;
   color: #2c2c2c;
 }
@@ -25,4 +25,54 @@ main {
   max-width: 900px; /* Maximale Breite des Main-Inhalt */
   margin: 0 auto; /* Zentriert den Block horizontal */
   padding: 20px; /* Etwas Innenabstand */
+}
+
+/* --- Header & Navigation Einrücken und verschönern (Woche 3) --- */
+header {
+  background-color: #FFC300; /* Hintergrund für Navigation, kräftiges Bienen-Gelb */
+  padding: 10px 20px;
+  border-bottom: 3px solid #E3A000; /* kleiner Rand als Übergang von Nav zu Main */
+  
+  /* max-Breite vom Main aufheben, damit Header über die volle Breite geht */
+  max-width: 100%; 
+}
+
+/* Alle h1 im Header zentrieren */
+header h1 { 
+  text-align: center;
+  color: #333;
+  margin: 0;
+}
+
+/* Alle ul in nav anpassen */
+nav ul { 
+  list-style-type: none; /* Aufzählungspunkte entfernen*/
+  padding: 0;
+  text-align: center; /* Navigation zentrieren */
+  margin: 10px 0 0 0;
+}
+
+/* Alle li in nav anpassen */
+nav li {
+  display: inline-block; /* Menüpunkte nebeneinander stellen */
+}
+
+/* Alle Hyperlinks in nav anpassen */
+nav a {
+  text-decoration: none; /* Unterstreichung entfernen */
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 5px; /* Leicht abgerundete Kanten */
+}
+
+/* weiße Auswahlbox um aktivien Menüpunkt anzuzeigen */
+nav a.active { /* Aktiver Menüpunkt in nav */
+  background-color: #FFFBEF; 
+  font-weight: bold;
+}
+
+/* Hover-Effekt für Menü-Punkte */
+nav a:hover { /* Mouse-over Effekt für alle Hyperlinks in nav */
+  background-color: #E3A000; /* Effekt beim Drüberfahren, dunkleres Gelb als der Hintergrund */
+  color: #FFF;  /* weiße/invertierte Schrift für Hover, setzt sich vom dunkleren Hintergrund gut ab */
 }
