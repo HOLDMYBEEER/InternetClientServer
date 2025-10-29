@@ -17,3 +17,12 @@ h1, h2, h3 {
   font-family: 'Trebuchet MS', sans-serif;
   color: #2c2c2c;
 }
+
+/* --- Layout Container, sieht besser aus für UX --- */
+/* Inhalt auf maximale Breite beschränken,
+   damit der Text breiten Browserfenstern nicht verzieht */
+main {
+  max-width: 900px; /* Maximale Breite des Main-Inhalt */
+  margin: 0 auto; /* Zentriert den Block horizontal */
+  padding: 20px; /* Etwas Innenabstand */
+}
