@@ -1,4 +1,19 @@
+/* --- Globale Styles (für Woche 2) --- */
 body {
-  background-color: #FAFAFA;
-  color: #333333;
+  
+  /* Aufgabe b) Honig-Ton statt Wallpaper, fand das sieht besser aus */
+  background-color: #FFFBEF;
+ 
+  /* Aufgabe c) moderne Schrift, in Dunkelgrau & Zeilenabstand */
+  font-family: Arial, Helvetica, sans-serif; /* Schrift */
+  color: #333333; /* Dunkelgrau */
+  line-height: 1.6; /* Zeilenabstand */
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  /* Eigene Schrift für Überschriften */
+  font-family: 'Trebuchet MS', sans-serif;
+  color: #2c2c2c;
 }
