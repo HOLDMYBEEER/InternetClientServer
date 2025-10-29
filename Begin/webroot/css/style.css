@@ -76,3 +76,38 @@ nav a:hover { /* Mouse-over Effekt für alle Hyperlinks in nav */
   background-color: #E3A000; /* Effekt beim Drüberfahren, dunkleres Gelb als der Hintergrund */
   color: #FFF;  /* weiße/invertierte Schrift für Hover, setzt sich vom dunkleren Hintergrund gut ab */
 }
+
+/* --- Blog & Kommentare ( für Woche 3 ) --- */
+.blog-post { 
+  background-color: #FFFFFF; /* Weißer Hintergrund für Posts im Karten-Design */
+  padding: 25px; /* Innenabstand der Karten */
+  margin-bottom: 20px; /* Abstand zur unteren Karte */
+  border-radius: 8px; /* Abgerundete Karten-Ecken */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Schatten zur Hervorhebung der karten */
+}
+
+.blog-post h2 {
+  margin-top: 0; /* Entfernt Standard-Abstand über der Überschrift in den Karten*/
+}
+
+.comment-section h3 {
+  font-size: 1.1em;
+  border-top: 1px solid #eee; /* Trennlinie Blogpost zu Kommentarspalte*/
+  padding-top: 15px; /* Abstand Trennlinie zur Kommentar-Überschrift */
+  margin-top: 25px; /* (c) Abstand Trennlinie zu Blog-Text */
+}
+
+/* Textarea formatieren */
+textarea {
+  width: 100%; /* Textfeld zieht sich über ges. Breite der Karte */
+  
+  /* damit padding die Breite nicht sprengt */
+  box-sizing: border-box; 
+  
+  min-height: 100px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: Arial, sans-serif; /* Erbt die body-Schriftart */
+  font-size: 1em;
+}
