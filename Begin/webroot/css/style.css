@@ -1,6 +1,6 @@
 /* --- Globale Styles (für Woche 2) --- */
 body {
-  
+
   /* Aufgabe b) Honig-Ton statt Wallpaper, fand das sieht besser aus */
   background-color: #FFFBEF;
  
@@ -27,7 +27,7 @@ main {
   padding: 20px; /* Etwas Innenabstand */
 }
 
-/* --- Header & Navigation Einrücken und verschönern (Woche 3) --- */
+/* --- Header & Navigation Einrücken und verschönern für Woche 3 --- */
 header {
   background-color: #FFC300; /* Hintergrund für Navigation, kräftiges Bienen-Gelb */
   padding: 10px 20px;
