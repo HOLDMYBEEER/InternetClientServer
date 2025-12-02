@@ -111,3 +111,38 @@ textarea {
   font-family: Arial, sans-serif; /* Erbt die body-Schriftart */
   font-size: 1em;
 }
+
+/* --- Erweiterungen für ESA2 (JavaScript) --- */
+
+/* Kommentarbereiche ausblenden */
+.comment-section {
+  display: none; /* Element ist komplett weg */
+}
+
+/*  Hilfsklasse, für JS um die Box anzuzeigen */
+.comment-section.visible {
+  display: block; /* lässt Element wieder erscheinen */
+  animation: fadeIn 0.5s; /* Fade Effekt */
+}
+
+/* Link zum Ausklappen */
+.comment-link {
+  color: #E3A000;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Buchstaben Counter */
+.char-count {
+  font-size: 0.85em;
+  color: #666;
+  text-align: right; /* Rechtsbündig unter Textarea */
+  margin-top: 5px;
+}
+
+/* Animation fürs Einblenden */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
