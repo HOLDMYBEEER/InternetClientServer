@@ -112,4 +112,72 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
+  /* ==============================================
+     ESA 3 - Woche 9 b): AJAX / JSON
+     Daten nachladen ohne Seite neu zu laden
+     ============================================== */
+
+  var loadBtn = document.getElementById("load-facts-btn");
+  var wissenBereich = document.getElementById("wissen-bereich");
+
+  // Prüfen, ob der Button existiert (damit es auf anderen Seiten keine Fehler gibt)
+  if (loadBtn) {
+    loadBtn.addEventListener("click", function() {
+      
+      // Feedback für den User: Button kurz deaktivieren und Text ändern
+      loadBtn.innerText = "Lade Daten...";
+      loadBtn.disabled = true;
+
+      // 1. Die Anfrage an den Server senden (fetch)
+      fetch('bienen_fakten.json')
+        .then(function(response) {
+          // 2. Prüfen, ob die Datei gefunden wurde (Status 200 OK)
+          if (!response.ok) {
+            throw new Error("Netzwerk-Fehler: " + response.status);
+          }
+          // 3. Antwort als JSON interpretieren
+          return response.json();
+        })
+        .then(function(data) {
+          // 4. Die Daten verarbeiten
+          
+          // Bereich leeren (damit wir nicht immer mehr anhängen, falls man mehrmals klickt)
+          // Wenn du willst, dass sie sich stapeln, entferne diese Zeile:
+          wissenBereich.innerHTML = ""; 
+
+          // Durch die Fakten-Liste aus dem JSON laufen
+          data.fakten.forEach(function(fakt) {
+            
+            // Neue HTML-Elemente bauen
+            var div = document.createElement("div");
+            div.className = "fakt-box"; // Klasse für CSS
+            
+            var h3 = document.createElement("h3");
+            h3.innerText = fakt.titel;
+            
+            var p = document.createElement("p");
+            p.innerText = fakt.text;
+            
+            // Zusammenfügen
+            div.appendChild(h3);
+            div.appendChild(p);
+            
+            // In die Seite einfügen
+            wissenBereich.appendChild(div);
+          });
+
+          // Button wieder normal machen
+          loadBtn.innerText = "Wissen aktualisiert!";
+          loadBtn.disabled = false;
+        })
+        .catch(function(error) {
+          // Fehlerbehandlung, falls z.B. der Server nicht läuft
+          console.error("Fehler beim Laden:", error);
+          wissenBereich.innerHTML = "<p style='color:red;'>Fehler beim Laden der Daten. Läuft der Server?</p>";
+          loadBtn.innerText = "Fehler";
+          loadBtn.disabled = false;
+        });
+    });
+  }  
+
 });

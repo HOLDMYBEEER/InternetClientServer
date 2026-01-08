@@ -146,3 +146,29 @@ textarea {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
+/* --- Styles für ESA3 (Ajax Button) --- */
+.action-btn {
+  background-color: #E3A000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: inherit; /* Gleiche Schrift wie der Rest */
+}
+
+.action-btn:hover {
+  background-color: #c98d00; /* Etwas dunkler beim Drüberfahren */
+}
+
+/* Style für die nachgeladenen Fakten-Boxen */
+.fakt-box {
+  background-color: #FFFBEF;
+  border-left: 4px solid #FFC300;
+  padding: 10px 15px;
+  margin: 15px 0;
+  animation: fadeIn 0.5s;
+}
