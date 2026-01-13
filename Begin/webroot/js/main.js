@@ -113,8 +113,8 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   /* ==============================================
-     ESA 3 - Woche 9 b): AJAX / JSON
-     Daten nachladen ohne Seite neu zu laden
+     Aufgabe 3 - Woche 9 (b): AJAX / JSON
+     Daten nachladen ohne Seiten-Reload
      ============================================== */
 
   var loadBtn = document.getElementById("load-facts-btn");
@@ -178,6 +178,5 @@ document.addEventListener("DOMContentLoaded", function() {
           loadBtn.disabled = false;
         });
     });
-  }  
-
+  }
 });
