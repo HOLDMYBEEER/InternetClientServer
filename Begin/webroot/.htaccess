@@ -1,0 +1,10 @@
+# .htaccess Konfiguration für meine Webseite
+
+# Zeichensatz festlegen um ungewollte Zeichen bei Umlauten zu verhindern
+AddDefaultCharset UTF-8
+
+# Verhindert, dass man die Verzeichnisstruktur sieht, wenn keine index.html existiert
+Options -Indexes
+
+# Eigene Fehlerseite für "Nicht gefunden" 
+ErrorDocument 404 "<h1>Ups, diese Biene ist nicht mehr hier (Seite nicht gefunden).</h1>"
