@@ -29,31 +29,38 @@
 
     <section class="blog-post">
       <h2>Willkommen in der Welt der Bienen</h2>
-      
       <img id="slideshow" src="./images/biene1.jpg" alt="Eine fleißige Biene" style="max-width: 100%; height: auto; border-radius: 5px; margin-bottom: 15px;" />
-
       <p>Bienen sind unglaublich wichtige Insekten. Sie bestäuben nicht nur unsere Pflanzen und sichern damit unsere Ernte, sondern produzieren auch leckeren Honig. Auf dieser Seite lernst du mehr über sie.</p>
-     
       <p><a href="#" class="comment-link">Kommentar schreiben</a></p>
-
+     
       <div class="comment-section">
-        <h3>Kommentar hinterlassen:</h3>
-        <textarea name="kommentar1" maxlength="500" placeholder="Dein Kommentar..."></textarea>
-        <p class="char-count">500 Zeichen übrig</p>
+        <h3>Kommentar:</h3>
+
+        <form action="save_comment.php" method="POST">
+            <input type="hidden" name="artikel_name" value="Welt der Bienen">
+            <textarea name="mein_kommentar" maxlength="500" placeholder="Dein Kommentar..." required></textarea>
+            <p class="char-count">500 Zeichen übrig</p>
+            <button type="submit" class="action-btn">Kommentar speichern</button>
+        </form>
+       
       </div>
     </section>
 
     <section class="blog-post">
       <h2>Die Honigbiene</h2>
-
       <p>Die bekannteste Biene ist die Westliche Honigbiene. Sie lebt in großen Staaten zusammen, die von einer Königin regiert werden. Tausende von Arbeiterinnen sammeln Nektar und Pollen.</p>
-
       <p><a href="#" class="comment-link">Kommentar schreiben</a></p>
 
       <div class="comment-section">
-        <h3>Kommentar hinterlassen:</h3>
-        <textarea name="kommentar2" maxlength="500" placeholder="Dein Kommentar..."></textarea>
-        <p class="char-count">500 Zeichen übrig</p>
+        <h3>Kommentar:</h3>
+        
+        <form action="save_comment.php" method="POST">
+            <input type="hidden" name="artikel_name" value="Die Honigbiene">
+            <textarea name="mein_kommentar" maxlength="500" placeholder="Dein Kommentar..." required></textarea>
+            <p class="char-count">500 Zeichen übrig</p>
+            <button type="submit" class="action-btn">Kommentar speichern</button>
+        </form>
+
       </div>
     </section>
 
